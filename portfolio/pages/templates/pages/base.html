@@ -1,20 +1,23 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
 	<title>James Little | Title HEre</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
     <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon" />
-    <meta name="description" content="Hello, my name is James Little. This is my project website or portfolio website; Whichever.">
-    <meta name="keywords" content="james, little, portfolio, programming, resume, stuff">
+
+    <meta name="description" content="James Little's Portfolio">
+    <meta name="keywords" content="james, little, portfolio, project, software, programming, development, resume, stuff">
     <meta name="author" content="James Little">  
+
 	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="screen">
 	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" media="screen">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
 	<link rel="stylesheet" href="{% static 'css/touchTouch.css' %}" type="text/css" media="screen">
 	<link rel="stylesheet" href="{% static 'css/kwicks-slider.css' %}" type="text/css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
 	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/superfish.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
@@ -23,6 +26,7 @@
 	<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>    
 	<script type="text/javascript" src="{% static 'js/touchTouch.jquery.js' %}"></script>
     <script src="{% static 'js/forms.js' %}"></script>
+
 	<script type="text/javascript">
         if ($(window).width()>1024){ //hmm, seems out of date..
             let _s = "{% static 'js/jquery.preloader.js' %}";
@@ -31,16 +35,14 @@
     </script>
 
 	<script>		
-		 jQuery(window).load(function() {	
-		 $x = $(window).width();		
-	if($x > 1024)
-	{			
-	jQuery("#content .row").preloader();    }	
-		 
-     jQuery('.magnifier').touchTouch();			
-    jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
-  		  }); 
-				
+        jQuery(window).load(function() {	
+            $x = $(window).width();		
+            if ($x > 1024) {			
+                jQuery("#content .row").preloader();    
+            }	
+            jQuery('.magnifier').touchTouch();			
+            jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
+        }); 
 	</script>
 
 	<!--[if lt IE 8]>
@@ -55,90 +57,87 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
   <![endif]-->
-  
-  <!--Google analytics code-->	  
-	  <script type="text/javascript">
-           var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-29231762-1']);
-          _gaq.push(['_setDomainName', 'jameslittle.org']);
-          _gaq.push(['_trackPageview']);
-        
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-      </script>
 </head>
+
 <body>
-     <div class="spinner"></div> 
-<!-- header start -->
-<header>
-      <div class="container clearfix">
-    <div class="row">
-          <div class="span12">
-        <div class="navbar navbar_">
-              <div class="container">
-            <h1 class="brand brand_"><a href="?page=home"><img alt="" src="{% static 'img/logo.png' %}"> </a></h1>
-            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
-            <div class="nav-collapse nav-collapse_  collapse">
-              <ul class="nav sf-menu">
-              <li><a href="?page=home">Home</a></li>
-                <li><a href="?page=projects">Projects</a></li>
-                <li><a href="?page=about_me">About Me</a></li>
-                <li><a href="?page=resume">Resume</a></li>
-                <li><a href="?page=contact">Contact</a></li> 
-              </ul> 
+
+    <div class="spinner"></div> 
+
+    <!-- header start -->
+    <header>
+        <div class="container clearfix">
+            <div class="row">
+                <div class="span12">
+                    <div class="navbar navbar_">
+                        <div class="container">
+                            <h1 class="brand brand_"><a href="?page=home"><img alt="" src="{% static 'img/logo.png' %}"> </a></h1>
+                            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+                            <!--<div class="nav-collapse nav-collapse_  collapse">
+                                <ul class="nav sf-menu">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">Resume</a></li>
+                                    <li><a href="">Contact</a></li>
+                                    <li><a href="">Projects</a></li>
+                                </ul> 
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-            </div>
-      </div>
         </div>
-  </div>
-    </header>
-<!--
-        <div style="text-align:center; background: #000; background-image: url('img/code_image.jpg'); width: 100%; height: 300px;"> 
-             <h1 style="font-family:'Open Sans'; color:#FFFFFF;">James Little <br /> Subtext</h1>
-        </div> -->
         
-                <div style="text-align:center; background: #000;"> 
-             <img src="{% static 'img/front.png' %}" alt="" />
-        </div>
-
-<div class="bg-content">
-      <div class="container">
-    <div class="row">
-        <div class="span12" style="margin-top: 20px;"> 
-        <!-- slider -->
-
-            
-        <span id="responsiveFlag"></span>
-        <div class="block-slogan">
-              <h2>Hello There!<br /></h2>
-              <div>
-            <p>My name is James Little, I am currently 23 years old and a student at Texas Tech Universtiy. I am studying Computer Science and hope to one day achieve a doctorate degree in the field of Computer Science. This website contains some recent project I have done for fun or for learning. Not only do I have a passion for programming, but all aspects of computing. I discoverd this love of computers when I was 15 years old and decided to take down the challenge of building my own computer. After weeks of researching and saving, I was able to build my computer. I haven't stop learning and exploring all areas of computing to better my understanding of these machines, to better understand myself.</p>
-            
-          </div>
-            </div>
-      </div>
-        </div>
-  </div>
-</div>   
-      <!-- content -->
-
-<!-- footer -->
-<footer>
-      <div class="container clearfix">
-    <!-- <ul class="list-social pull-right">
-          <li><a class="icon-1" href="#"></a></li>
-          <li><a class="icon-2" href="#"></a></li>
-          <li><a class="icon-3" href="#"></a></li>
-          <li><a class="icon-4" href="#"></a></li>
-        </ul> -->
+    </header>
     
-     <div class="privacy pull-left">&copy; <?php echo date("Y"); ?> | <a href="http://www.jameslittle.org">James Little</a> | <a href="http://www.servage.net/?coupon=jameslittle">Hosted By Servage One</a> | <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>
+    
+    <div style="text-align:center; background: #000;"> 
+        <img src="{% static 'img/code_image.jpg' %}" />
     </div>
+   
+
+    <div class="bg-content">
+        <div class="container">
+            <div class="row">
+                <div class="span12" style="margin-top: 20px; margin-bottom: 20px;"> 
+                    <!-- slider -->
+                    <span id="responsiveFlag"></span>
+
+                    <div class="block-slogan">
+                        <h2> About Me<br /></h2>
+                    </div>
+
+                    <div class="span2">
+                        <img src="{% static 'img/james.jpeg' %}" alt="" class="thumbnail" style="max-height:200px; max-width:200px; border-radius:5%;" />
+                    </div>
+
+                    <div class="span9">
+                        <p>
+                            My name is James Little. I am currently a software developer in Lubbock, Texas.  I have a B.S. in Computer Science and a minor in mathematics. I work with multiple languages on a daily basis; including but not limited to
+                            C\C++, C#, Scala, Bash, Python. I have extensive experience in system administration, networking, developer operations. I enjoy writing eloquent solutions to
+                            complicated problems. I prefer tabs over spaces.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- footer -->
+    <footer>
+        <div class="container clearfix">
+            <!--
+            <ul class="list-social pull-right">
+                <li><a class="icon-1" href="#"></a></li>
+                <li><a class="icon-2" href="#"></a></li>
+                <li><a class="icon-3" href="#"></a></li>
+                <li><a class="icon-4" href="#"></a></li>
+            </ul> -->
+
+            <div class="privacy pull-left">&copy; 2019 | <a href="https://www.jameslittle.org">James Little</a>
+        </div>
     </footer>
+
     <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
 </body>
 </html>
