@@ -8,7 +8,7 @@ cycler==0.10.0
 datefinder==0.7.0
 decorator==4.3.0
 demjson==2.2.4
-Django==2.1.5
+Django==2.2.24
 django-bootstrap4==0.0.7
 django-jenkins==0.110.0
 docker==3.7.0
